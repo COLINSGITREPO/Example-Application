@@ -21,7 +21,7 @@ jobs:
           name: update-npm
           command: 'sudo npm install -g npm@8.19.2'
       - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json"}}
+          key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
           name: install-npm
           command: npm install
